@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Didact Gothic", sans-serif;
+}
+
+.hero{
+    background-image: url('/public/images/servicetools.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+/* SHADOW  */
+.shadowy{
+    background-image: linear-gradient(to right,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0)
+    );
+}
