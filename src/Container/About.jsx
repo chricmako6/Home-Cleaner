@@ -4,13 +4,13 @@ import AboutCard from "../components/AboutCard"
 export default function About(){
     return(
        <>
-        <section className="container h-auto mx-auto w-[2500px]">
-            <div className="items-center justify-center w-1/2 mx-auto mt-20">
+        <section className="container h-auto mx-auto md:w-[2500px] w-[500px]">
+            <div className="items-center justify-center flex md:w-1/2 mx-auto mt-20 bg-slate-300 md:text-[80px] text-[10px]">
                 <h1 className="items-center leading-[75px] text-center">
                     Why Choose <span className="text-Primary">Cleaning Rabbit</span>
                 </h1>
             </div>
-            <div className="grid md:grid-cols-4 gap-4 mt-10 mx-auto ml-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-10 mx-auto ml-10">
               <div className="">
                 <AboutCard
                 icons={<Lightbulb className="w-20 h-20 bg-cover bg-center text-Primary"/>}

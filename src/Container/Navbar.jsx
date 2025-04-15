@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, ChevronDown, AlignJustify } from "lucide-react";
 export default function Navbar(){
     return(
         <>
         <div className="flex w-screen items-center justify-between p-4 bg-white shadow-md shadow-gray-200 fixed z-10 h-[80px]">
                  <div>
-                    <h1  className="text-[50px] pl-10 md:pl-20">
+                    <h1  className="text-[30px] md:text-[50px] pl-10 md:pl-20">
                         <span className="text-Primary">Home</span>Clean.
                     </h1>
                 </div>
@@ -26,7 +26,6 @@ export default function Navbar(){
                             <Link to="/profile">We're Cleaners!</Link>
                        </li>
                     </div>
-
                    
                     <div className="relative group">
                             <button className="flex items-center gap-2 text-Paragraph">
@@ -46,6 +45,8 @@ export default function Navbar(){
                             </ul>
                     </div>
                 </ul>
+                {/* Icon for menu  button */}
+                <AlignJustify className="md:hidden block w-8 h-8 text-pointer hover:bg-Primary"/>
             </nav>
         </div>
         </>
