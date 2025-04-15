@@ -1,47 +1,49 @@
-import { Search, Earth, HandCoins} from "lucide-react"
+import FunctionalityCard from "../components/FunctionalityCard"
+
 export default function Functionality(){
     return(
         <>
-        <section className=" h-auto mt-72 ">
-            <h1 className="items-center leading-[75px] text-center mb-10">
+        <section className=" h-auto mt-20 w-[450px] md:w-[995px] overflow-hidden md:overflow-visible mx-auto ">
+            <h1 className="items-center leading-[75px] text-center mb-10 md:text-[80px] text-[60px">
                 How it Works
             </h1>
-            <div className="grid grid-cols-3 my-10 container mx-auto w-[995px] rounded-2xl shadow-md border-1 bg-gray-300/10">
+            <div className="flex md:grid md:grid-cols-3 p-5 gap-5 md:gap-1 md:p-3 container mx-auto w-[26rem] md:w-[995px] rounded-2xl shadow-md border-1 overflow-hidden md:overflow-visible bg-gray-300/10">
                 
-                    <div className="bg-white h-64 w-auto p-5 rounded-s-2xl">
-                       <Search className="items-center justify-center mx-auto text-Primary w-32 h-20 p-2" />
-                        <h2 className="font-semibold text-[26px] leading-[32px] my-2 justify-center items-center flex">
-                            Step 1
-                        </h2>
-                        <p className="font-bold px-3 text-base text-[18px] text-Paragraph">
-                            Search for cleaners in your area based on your neeeds.
-                        </p>
-                    </div>
-            
+                    <div className="">
+                       <FunctionalityCard
+                            num={
+                                <>
+                                  <h4 className="items-center text-white text-[40px] justify-center flex w-24 h-24 rounded-full bg-yellow-500 ">1</h4>
+                                </>
+                            }
+                            title="Step 1"
+                            description="Search for cleaners in your area based on your neeeds."
+                        />
+                     </div>
 
-                
-                    <div className="bg-white h-64 w-auto p-5 "> 
-                    <Earth className="items-center justify-center mx-auto text-Primary w-32 h-20 p-2"/>
-                        <h2 className="font-semibold text-[26px] leading-[32px] my-2 justify-center items-center flex">
-                            Step 2
-                        </h2>
-                        <p className="font-bold px-3 text-base text-[18px] text-Paragraph">
-                            Browse cleaner, profiles, rates and review.
-                        </p>
-                    </div>
-               
+                     <div className="">
+                       <FunctionalityCard
+                            num={
+                                <>
+                                  <h4 className="items-center text-white text-[40px] justify-center flex w-24 h-24 rounded-full bg-green-500 ">2</h4>
+                                </>
+                            }
+                            title="Step 2"
+                            description="Browse cleaner, profiles, rates and review."
+                        />
+                     </div>
 
-            
-                    <div className="bg-white h-64 w-auto p-5 rounded-e-2xl">
-                    <HandCoins className="items-center justify-center mx-auto text-Primary w-32 h-20 p-2" />
-                        <h2 className="font-semibold text-[26px] leading-[32px] my-2 justify-center items-center flex">
-                            Step 3
-                        </h2>
-                        <p className="font-bold px-3 text-base text-[18px] text-Paragraph">
-                            Book your cleaning, chat with your cleaners, and pay securely.
-                        </p>
-                    </div>
-                
+                     <div className="">
+                       <FunctionalityCard
+                            num={
+                                <>
+                                  <h4 className="items-center text-white text-[40px] justify-center flex w-24 h-24 rounded-full bg-Primary ">3</h4>
+                                </>
+                            }
+                            title="Step 3"
+                            description=" Book your cleaning, chat with your cleaners, and pay securely."
+                        />
+                     </div>
             </div>
         </section>
         </>

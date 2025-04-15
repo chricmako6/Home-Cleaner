@@ -1,8 +1,57 @@
-// import { useState } from "react"
+import { useState } from "react"
 import { HeartHandshake, Lightbulb, IdCard, Split, ArrowUpRight  } from "lucide-react";
 import AboutCard from "../components/AboutCard"
 
 export default function About(){
+  const images = [
+    {
+        src: "/images/kitchen.jpg",
+        title: "Home Cleaning",
+    },
+    {
+        src: "/images/office.jpg",
+        title: "Offices Cleaning",
+    },
+    {
+        src: "/images/kitchen.jpg",
+        title: "Room Cleaning",
+    },
+    {
+        src: "/images/office.jpg",
+        title: "Living Clean",
+    },
+];
+
+const [currentIndex, setCurrentIndex] = useState(0);
+    const [intervalId, setIntervalId] = useState(null);
+
+    const startAutoSlide = () => {
+        if (!intervalId) {
+            const id = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+            }, 3000); // Change image every 3 seconds
+            setIntervalId(id);
+        }
+    };
+
+    const stopAutoSlide = () => {
+        if (intervalId) {
+            clearInterval(intervalId);
+            setIntervalId(null);
+        }
+    };
+
+    // Determine the number of images to display based on screen size
+    const getVisibleImages = () => {
+      const isLargeScreen = window.innerWidth >= 768; // Tailwind's `md` breakpoint
+      const visibleImages = isLargeScreen ? 2 : 1;
+      return images.slice(currentIndex, currentIndex + visibleImages).concat(
+          images.slice(0, Math.max(0, currentIndex + visibleImages - images.length))
+      );
+  };
+
+  const visibleImages = getVisibleImages();
+
     return(
        <>
         <section className="container h-auto mx-auto md:w-[2500px] w-[499px]">
@@ -62,34 +111,29 @@ export default function About(){
             </div>
 
             {/* EXPLORE IMAGES */}
-            <div className="grid grid-cols-4  mt-20 mb-10 mx-auto p-6">
-                <div className="col-span-4 flex gap-10 mx-auto">
-                    <div className="h-96 w-[550px] relative">
-                    <img src="/images/kitchen.jpg" alt="" className="md:h-96 h-96 md:w-[550px] w-[430px] bg-cover bg-no-repeat rounded-3xl shadow-lg transform transition-transform duration-300 md:hover:scale-105 hover:scale-100"/>
-
-                    <div className="absolute flex items-center justify-center left-5 md:left-10 bottom-6">
-                        <h2 className="text-white font-extrabold md:text-[45px] text-[30px]">Home Cleaning</h2>
-                        <button className="bg-Primary hover:bg-Secondary rounded-full p-3 items-center justify-center ml-32">
-                         <ArrowUpRight className="text-white font-extrabold text-[40px] md:text-[45px]"/>
-                         {/* <ArrowUp /> */}
-                        </button>
-                    </div>
-                    </div>
-
-                    <div className="h-96 w-[550px] relative">
-                        <img src="/images/office.jpg" alt="" className="h-96 md:w-[550px] w-[430px] bg-cover bg-no-repeat rounded-3xl shadow-lg transform transition-transform duration-300 hover:scale-105"/>
-
-                        <div className="absolute flex items-center justify-center left-10 bottom-6 ">
-                            <h2 className="text-white font-extrabold md:text-[45px] text-[30px]">
-                                Offices Cleaning
-                            </h2>
-                            <button className="bg-Primary hover:bg-Secondary rounded-full p-3 items-center justify-center ml-28">
-                             <ArrowUpRight className="text-white font-extrabold text-[40px] md:text-[45px]"/>
-                            </button>
+            <div
+                    className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-20 mb-10 mx-auto p-6"
+                    onMouseEnter={stopAutoSlide}
+                    onMouseLeave={startAutoSlide}
+                >
+                    {visibleImages.map((image, index) => (
+                        <div key={index} className="h-80 w-[430px] md:h-96 md:w-[560px] md:pl-5 relative">
+                            <img
+                                src={image.src}
+                                alt={image.title}
+                                className="h-96 w-full bg-cover bg-no-repeat rounded-3xl shadow-lg transform transition-transform duration-300 hover:scale-105"
+                            />
+                            <div className="absolute  flex items-center justify-center left-5 md:left-10 bottom-6">
+                                <h2 className="text-white  font-extrabold md:text-[45px] text-[30px]">
+                                    {image.title}
+                                </h2>
+                                <button className="bg-Primary hover:bg-Secondary rounded-full p-3 items-center justify-center ml-32">
+                                    <ArrowUpRight className="text-white font-extrabold text-[40px] md:text-[45px]" />
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-            </div>
         </section>
        </>
     );
