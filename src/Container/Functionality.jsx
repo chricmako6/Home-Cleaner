@@ -4,13 +4,14 @@ export default function Functionality(){
     return(
         <>
         <section className=" h-auto mt-20 w-[350px] md:w-[995px] overflow-hidden md:overflow-visible mx-auto ">
-            <h1 className="items-center leading-[75px] text-center mb-10 md:text-[80px] text-[60px">
+            <h1 className="items-center leading-[75px] text-center mb-10 md:text-[80px] text-[30px">
                 How it Works
             </h1>
-            <div className="flex md:grid md:grid-cols-3 p-5 gap-5 md:gap-1 md:p-3 mb-5 container mx-auto w-[26rem] md:w-[995px] rounded-2xl shadow-md border-1 overflow-hidden md:overflow-visible bg-gray-300/10">
+            <div className="flex md:grid md:grid-cols-3 p-2 gap-7 md:gap-1 md:p-3 mb-5 container mx-auto w-[21rem] md:w-[995px] rounded-2xl shadow-md border-1 bg-gray-300/10">
                 
                     <div className="">
                        <FunctionalityCard
+                           ringclass="ring-2 ring-offset-1 ring-yellow-500"
                             num={
                                 <>
                                   <h4 className="items-center text-white text-[40px] justify-center flex w-24 h-24 rounded-full bg-yellow-500 ">1</h4>
@@ -23,6 +24,7 @@ export default function Functionality(){
 
                      <div className="">
                        <FunctionalityCard
+                            ringclass="ring-2 ring-offset-1 ring-green-500"
                             num={
                                 <>
                                   <h4 className="items-center text-white text-[40px] justify-center flex w-24 h-24 rounded-full bg-green-500 ">2</h4>
@@ -35,6 +37,7 @@ export default function Functionality(){
 
                      <div className="">
                        <FunctionalityCard
+                            ringclass="ring-2 ring-offset-1 ring-Primary"
                             num={
                                 <>
                                   <h4 className="items-center text-white text-[40px] justify-center flex w-24 h-24 rounded-full bg-Primary ">3</h4>

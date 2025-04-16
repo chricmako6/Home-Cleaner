@@ -3,13 +3,13 @@ export default function Footer(){
 
     return(
         <>
-        <section className="container h-auto mx-auto md:w-[3000px] w-[350px] bg-gray-300/10 rounded-2xl  overflow-hidden md:overflow-visible">
+        <section className="container h-auto mx-auto md:w-[3000px] w-[350px] bg-gray-3000/10 rounded-2xl  overflow-hidden md:overflow-visible">
             <div className="grid md:grid-cols-2 md:p-0 p-2">
                 <div className=" md:p-5 md:w-[590px] w-[350px] p-2">
                     <h1  className="text-[50px] md:pl-5">
                         <span className="text-Primary">Home</span>Clean.
                     </h1>
-                    <p className="text-Paragraph md:pl-5 font-bold text-base text-[15px] md:text-[18px]">
+                    <p className="text-Paragraph md:pl-5 font-bold text-base text-[12px] md:text-[18px]">
                     HomeClean is dedicated to providing top-notch cleaning services, ensuring your home is spotless, organized, and stress-free. Your satisfaction is our priority, and we strive to create a welcoming and healthy living environment for you and your family.
                     </p>
                 </div>

@@ -1,9 +1,9 @@
 
-export default function FunctionalityCard({num, title, description}) {
+export default function FunctionalityCard({num, title, description, ringclass}) {
     return(
        <>
-         <section className="bg-white shadow-md h-68 w-[24rem] my-5 md:w-72 p-5 rounded-2xl justify-center items-center mx-auto">
-            <div className="ring-2 rounded-full p-2 bg-white w-28 h-28 ring-Paragraph mx-auto">
+         <section className="bg-white shadow-md h-68 w-[20rem] my-3 md:my-5 md:w-72 p-5 rounded-2xl justify-center items-center mx-auto">
+            <div className={`rounded-full p-2 bg-white w-28 h-28 mx-auto ${ringclass}`}>
                 {num}
             </div>
             <h2 className="font-semibold text-[26px] leading-[32px] my-2 justify-center items-center flex">

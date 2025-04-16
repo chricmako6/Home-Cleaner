@@ -5,8 +5,8 @@ export default function Testimonial(){
     return(
         <>
         <section className="container mx-auto mt-32 mb-20">
-            <div className="flex mx-auto ml-[-7px] justify-center items-center">
-                <h1 className="mx-auto md:text-[80px] text-[55px] p-0 md:p-0 text-center">
+            <div className="flex mx-auto md:ml-[-7px] justify-center items-center">
+                <h1 className="mx-auto md:text-[80px] text-[50px] leading-[45px] p-0 md:p-0 text-center">
                     What Our Client Say
                 </h1>
                 <div className="mx-auto justify-center items-center md:block hidden">

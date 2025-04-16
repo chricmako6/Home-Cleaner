@@ -60,11 +60,11 @@ export default function Services() {
     ];
 
     return (
-        <section id="Services" className="container mx-auto px-11 md:ml-10">
+        <section id="Services" className="container mx-auto md:px-11 md:ml-10 overflow-hidden md:overflow-visible">
             <div className="justify-center text-center mt-20">
                 <h1 className="md:text-[80px] text-[60px]">Services</h1>
             </div>
-            <div className="flex md:grid md:grid-cols-3 mt-5 w-auto h-auto gap-[12px] overflow-hidden md:overflow-visible">
+            <div className="flex md:grid md:grid-cols-3 mt-5 w-auto h-auto gap-[16px] md:gap-[12px]">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}
