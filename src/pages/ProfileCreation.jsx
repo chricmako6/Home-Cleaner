@@ -19,10 +19,10 @@ export default function ProfileCreation(){
         <img
             src={profileImage}
             alt="Profile"
-            className="w-80 h-80 items-center bg-gray-300 text-white p-5 rounded-3xl object-cover"
+            className="w-72 h-72 items-center bg-gray-300 text-white p-5 rounded-3xl object-cover"
         />
     ) : (
-        <CircleUserRound className="w-52 h-52 items-center bg-gray-300 text-white p-5 ml-7 mb-5 rounded-3xl" />
+        <CircleUserRound className="w-52 h-52 items-center bg-gray-300 text-white p-5 ml-16 md:ml-7 mb-5 rounded-3xl" />
     );
     return(
         <>
@@ -39,27 +39,27 @@ export default function ProfileCreation(){
                     </p>
                 </div>
                 <form className="mb-10 ">
-                    <div className=" container mx-auto grid grid-cols-2 mt-5 bg-slate-200/20 w-[1100px] p-6 rounded-2xl shadow-lg shadow-gray-500/50">
-                        <div className="items-center justify-center">
+                    <div className=" container mx-auto md:grid md:grid-cols-2 mt-5 bg-slate-200/20 md:w-[1100px] p-6 rounded-2xl shadow-lg shadow-gray-500/50">
+                        <div className="items-center justify-center ">
                             <label className="font-bold text-base text-[20px]">Your Name</label>
-                            <input type="text" placeholder="Enter you name" className="border-2 rounded-lg p-2 mb-4 w-[500px] focus:outline-none shadow-sm" />
+                            <input type="text" placeholder="Enter you name" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
                             <label className="font-bold text-base text-[20px]">Password</label>
-                            <input type="password" placeholder="Enter you password" className="border-2 rounded-lg p-2 mb-4 w-[500px] focus:outline-none shadow-sm" />
+                            <input type="password" placeholder="Enter you password" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
                             <label className="font-bold text-base text-[20px]">Email Address</label>
-                            <input type="email" placeholder="Enter your email" className="border-2 rounded-lg p-2 mb-4 w-[500px] focus:outline-none shadow-sm" />
+                            <input type="email" placeholder="Enter your email" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
                             <label className="font-bold text-base text-[20px]">Service We Provide</label>
-                            <input type="text" placeholder="Service we provide" className="border-2 rounded-lg p-2 mb-4 w-[500px] focus:outline-none shadow-sm" />
+                            <input type="text" placeholder="Service we provide" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
                             <h3 className="text-Primary font-bold px-3 text-base text-[18px]">Delete Your Account</h3>
                             <p className="font-bold px-3 text-base text-[18px] text-Paragraph">You will receive an email to confirm your decision. Please note, that all boards you have created will be permanently erased.</p>
 
-                            <div className="flex items-center justify-center">
-                                <button className="bg-Primary hover:bg-Secondary text-white font-bold shadow-lg shadow-gray-500/50 rounded-2xl p-2 items-center justify-center my-3 mx-auto flex px-20">Cancel</button>
+                            <div className="flex items-center justify-center ">
+                                <button className="bg-Primary hover:bg-Secondary text-white font-bold shadow-lg shadow-gray-500/50 rounded-2xl p-2 items-center justify-center my-3 mx-auto flex md:px-20 px-16">Cancel</button>
 
-                                <button className="bg-Primary hover:bg-Secondary text-white font-bold shadow-lg shadow-gray-500/50 rounded-2xl p-2 items-center justify-center my-3 mx-auto flex px-20">Save</button>
+                                <button className="bg-Primary hover:bg-Secondary text-white font-bold shadow-lg shadow-gray-500/50 rounded-2xl p-2 items-center justify-center my-3 mx-auto flex md:px-20 px-16">Save</button>
                             </div>
                             
                         </div>

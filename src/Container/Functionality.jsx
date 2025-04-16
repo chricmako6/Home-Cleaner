@@ -3,11 +3,11 @@ import FunctionalityCard from "../components/FunctionalityCard"
 export default function Functionality(){
     return(
         <>
-        <section className=" h-auto mt-20 w-[450px] md:w-[995px] overflow-hidden md:overflow-visible mx-auto ">
+        <section className=" h-auto mt-20 w-[350px] md:w-[995px] overflow-hidden md:overflow-visible mx-auto ">
             <h1 className="items-center leading-[75px] text-center mb-10 md:text-[80px] text-[60px">
                 How it Works
             </h1>
-            <div className="flex md:grid md:grid-cols-3 p-5 gap-5 md:gap-1 md:p-3 container mx-auto w-[26rem] md:w-[995px] rounded-2xl shadow-md border-1 overflow-hidden md:overflow-visible bg-gray-300/10">
+            <div className="flex md:grid md:grid-cols-3 p-5 gap-5 md:gap-1 md:p-3 mb-5 container mx-auto w-[26rem] md:w-[995px] rounded-2xl shadow-md border-1 overflow-hidden md:overflow-visible bg-gray-300/10">
                 
                     <div className="">
                        <FunctionalityCard

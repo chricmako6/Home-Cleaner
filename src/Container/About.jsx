@@ -54,7 +54,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
     return(
        <>
-        <section className="container h-auto mx-auto md:w-[2500px] w-[499px]">
+        <section className="container h-auto mx-auto md:w-[2500px] w-[450px]">
             <div className="items-center justify-center flex md:w-1/2 mx-auto mt-20">
                 <h1 className="items-center leading-[75px] text-center md:text-[80px] text-[60px]">
                     Why Choose <span className="text-Primary">Cleaning Rabbit</span>

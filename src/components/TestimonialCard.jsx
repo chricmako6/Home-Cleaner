@@ -3,7 +3,7 @@ export default function TestimonialCard({ title, description, image }){
 
     return(
         <>
-        <section className="h-80 w-[560px] rounded-2xl border-1 border-Paragraph shadow-md shadow-gray-500/50 mx-auto mt-10 px-5  p-5">
+        <section className="w-[380px] md:h-80 md:w-[550px] rounded-2xl border-1 border-Paragraph shadow-md shadow-gray-500/50 mx-auto mt-10 px-5  p-5">
             <div className="">
                 <img
                  src={image}
