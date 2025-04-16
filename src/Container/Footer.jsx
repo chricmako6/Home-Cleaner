@@ -3,7 +3,7 @@ export default function Footer(){
 
     return(
         <>
-        <section className="container h-auto mx-auto md:w-[3000px] w-[350px] bg-gray-3000/10 rounded-2xl  overflow-hidden md:overflow-visible">
+        <section className="container h-auto mx-auto md:w-[3000px] w-[370px] bg-gray-300/20 rounded-2xl  overflow-hidden md:overflow-visible">
             <div className="grid md:grid-cols-2 md:p-0 p-2">
                 <div className=" md:p-5 md:w-[590px] w-[350px] p-2">
                     <h1  className="text-[50px] md:pl-5">

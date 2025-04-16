@@ -5,6 +5,11 @@ import { CircleUserRound } from "lucide-react";
 export default function ProfileCreation(){
 
     const [profileImage, setProfileImage] = useState();
+    const [service, setService] = useState("");
+
+    const handleServiceChange = (e) => {
+        setService(e.target.value); // Update the service state
+    };
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
@@ -26,21 +31,21 @@ export default function ProfileCreation(){
     );
     return(
         <>
-        <Navbar className/>
-        <section className="container w-full mx-auto h-[60rem] centered">
+        <Navbar className=""/>
+        <section className="container md:w-full w-[435px] mx-auto h-[60rem]">
          
-            <div className="justify-center items-center h-[60rem] w-full"> 1
+            <div className="justify-center items-center h-[60rem] w-auto"> 1
                 <div className=" justify-center items-center mt-28 w-[600px] ml-24">
-                    <h1 className="text-4xl font-bold">
+                    <h1 className="text-4xl font-bold w-1/2">
                         Create Account
                     </h1>
-                    <p className="font-bold px-3 text-base text-[18px] text-Paragraph">
+                    <p className="font-bold px-3 text-base text-[18px] text-Paragraph w-1/2">
                         Edit your name, avatar etc.
                     </p>
                 </div>
-                <form className="mb-10 ">
-                    <div className=" container mx-auto md:grid md:grid-cols-2 mt-5 bg-slate-200/20 md:w-[1100px] p-6 rounded-2xl shadow-lg shadow-gray-500/50">
-                        <div className="items-center justify-center ">
+                <form className="mb-10">
+                    <div className=" md:container mx-auto md:grid md:grid-cols-2 mt-5 bg-slate-200/20 w-[420px] md:w-[1100px] p-6 rounded-2xl shadow-lg shadow-gray-500/50 ">
+                        <div className="items-center justify-center">
                             <label className="font-bold text-base text-[20px]">Your Name</label>
                             <input type="text" placeholder="Enter you name" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
@@ -51,9 +56,24 @@ export default function ProfileCreation(){
                             <input type="email" placeholder="Enter your email" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
                             <label className="font-bold text-base text-[20px]">Service We Provide</label>
-                            <input type="text" placeholder="Service we provide" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
+                            <input type="text" 
+                                   value={service} 
+                                   onChange={handleServiceChange}
+                                   placeholder="Service we provide" 
+                                   className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
+                            <select
+                                    value={service}
+                                    onChange={handleServiceChange}
+                                    className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm">
 
-                            <h3 className="text-Primary font-bold px-3 text-base text-[18px]">Delete Your Account</h3>
+                                    <option value="">Select a service</option>
+                                    <option value="Service 1">Service 1</option>
+                                    <option value="Service 2">Service 2</option>
+                                    <option value="Service 3">Service 3</option>
+                                    <option value="Service 4">Service 4</option>
+                                </select>
+
+                            <h3 className="text-Primary font-bold px-3 text-base text-[18px] w-1/2">Delete Your Account</h3>
                             <p className="font-bold px-3 text-base text-[18px] text-Paragraph">You will receive an email to confirm your decision. Please note, that all boards you have created will be permanently erased.</p>
 
                             <div className="flex items-center justify-center ">

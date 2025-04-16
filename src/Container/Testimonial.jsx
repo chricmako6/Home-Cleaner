@@ -4,7 +4,7 @@ export default function Testimonial(){
 
     return(
         <>
-        <section className="container mx-auto mt-32 mb-20">
+        <section className="md:container mx-auto mt-32 mb-20">
             <div className="flex mx-auto md:ml-[-7px] justify-center items-center">
                 <h1 className="mx-auto md:text-[80px] text-[50px] leading-[45px] p-0 md:p-0 text-center">
                     What Our Client Say
@@ -18,7 +18,7 @@ export default function Testimonial(){
                     </button> 
                 </div>
             </div>
-            <div className="flex md:grid md:grid-cols-2 mx-auto md:gap-0 gap-7 overflow-hidden md:overflow-visible md-p-0 p-3">
+            <div className="flex md:grid md:grid-cols-2 mx-auto md:gap-0 gap-7 overflow-hidden md:overflow-visible p-3">
                 <div className="">
                     <TestimonialCard
                         title="Chriss Dev"

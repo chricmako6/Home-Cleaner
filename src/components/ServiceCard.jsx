@@ -16,7 +16,7 @@ export default function ServiceCard({ title, description, images }){
     return(
         <>
         <div className="md:ml-1 ml-4 md:w-96 w-[25rem] mx-auto rounded-lg">
-           <div className="relative w-80 md:w-96">
+           <div className="relative w-96">
             <img 
                 src={images[currentImageIndex].src}
                 alt={title[currentImageIndex].title} 
