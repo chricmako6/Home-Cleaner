@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import { CircleArrowLeft , CircleArrowRight } from "lucide-react";
 
 export default function ServiceCard({ title, description, images }){
@@ -39,7 +40,7 @@ export default function ServiceCard({ title, description, images }){
                     {description}
                 </p>  
                 <button className="bg-Primary hover:bg-Secondary text-white font-bold shadow-lg shadow-gray-500/50 rounded-2xl p-2 items-center justify-center my-7 mx-auto flex px-36">
-                    Book Now
+                <Link to="/search">Book Now</Link>
                 </button>   
            </div>
         </div>

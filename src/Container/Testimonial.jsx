@@ -4,7 +4,7 @@ export default function Testimonial(){
 
     return(
         <>
-        <section className="md:container mx-auto mt-32 mb-20">
+        <section className="mx-auto mt-32 mb-20">
             <div className="flex mx-auto md:ml-[-7px] justify-center items-center">
                 <h1 className="mx-auto md:text-[80px] text-[50px] leading-[45px] p-0 md:p-0 text-center">
                     What Our Client Say

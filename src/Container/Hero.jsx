@@ -4,7 +4,7 @@ export default function Hero(){
     return(
         <>
         <Navbar/>
-        <section className="hero relative md:grid grid-cols-2 h-[600px] md:container max-w-full">
+        <section className="hero relative md:grid grid-cols-2 h-[600px] max-w-full">
          <div className="shadowy">
             <div className="md:my-36 my-28 pl-4 md:pl-20 absolute">
                 <h1 className="md:leading-[75px] leading-[55px] md:text-[80px] text-[55px]">

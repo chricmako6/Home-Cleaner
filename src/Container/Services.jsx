@@ -60,7 +60,7 @@ export default function Services() {
     ];
 
     return (
-        <section id="Services" className="container mx-auto md:px-11 md:ml-10 overflow-hidden md:overflow-visible">
+        <section id="Services" className="mx-auto md:px-11 md:ml-10 overflow-hidden md:overflow-visible">
             <div className="justify-center text-center mt-20">
                 <h1 className="md:text-[80px] text-[60px]">Services</h1>
             </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../Container/Footer";
 import Navbar from "../Container/Navbar";
 import { CircleUserRound } from "lucide-react";
+
 export default function ProfileCreation(){
 
     const [profileImage, setProfileImage] = useState();
@@ -32,7 +33,7 @@ export default function ProfileCreation(){
     return(
         <>
         <Navbar className=""/>
-        <section className="container md:w-full w-[435px] mx-auto h-[60rem]">
+        <section className="md:w-full w-[435px] mx-auto h-[60rem]">
          
             <div className="justify-center items-center h-[60rem] w-auto"> 1
                 <div className=" justify-center items-center mt-28 w-[600px] ml-24">
@@ -56,11 +57,11 @@ export default function ProfileCreation(){
                             <input type="email" placeholder="Enter your email" className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
 
                             <label className="font-bold text-base text-[20px]">Service We Provide</label>
-                            <input type="text" 
+                            {/* <input type="text" 
                                    value={service} 
                                    onChange={handleServiceChange}
                                    placeholder="Service we provide" 
-                                   className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" />
+                                   className="border-2 rounded-lg p-2 mb-4 md:w-[500px] w-[350px] focus:outline-none shadow-sm" /> */}
                             <select
                                     value={service}
                                     onChange={handleServiceChange}
