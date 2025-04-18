@@ -93,7 +93,7 @@ export default function SearchProfile(){
                                 title={profile.title}
                                 header=""
                                 description={profile.description}
-                                image={<img src={profile.image} alt={profile.title} className="object-cover rounded-md shadow-md shadow-gray-400/10 w-[95px] h-[95px]" />}
+                                image={<img src={profile.image} alt={profile.title} className="object-cover rounded-md shadow-xl shadow-gray-400/20 w-[95px] h-[95px]" />}
                             />
                         ))
                     ) : (
